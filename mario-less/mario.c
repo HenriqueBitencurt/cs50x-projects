@@ -8,7 +8,6 @@ int main(void)
     {
         height = get_int("Height: ");
     }
-    sizeof_height;
     while (height < 1 || height > 8);
 
     for (int i = 1; i <= height; i++)
@@ -17,6 +16,7 @@ int main(void)
         {
             printf(" ");
         }
+
         for (int k = 0; k < i; k++)
         {
             printf("#");
@@ -25,3 +25,4 @@ int main(void)
         printf("\n");
     }
 }
+mak
