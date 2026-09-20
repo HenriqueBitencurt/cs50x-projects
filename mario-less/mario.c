@@ -25,4 +25,3 @@ int main(void)
         printf("\n");
     }
 }
-mak
