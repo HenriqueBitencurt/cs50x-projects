@@ -41,7 +41,6 @@ int count_letters(string text)
     int letters = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        // Conta apenas caracteres alfabéticos (A-Z, a-z)
         if (isalpha(text[i]))
         {
             letters++;
@@ -52,10 +51,9 @@ int count_letters(string text)
 
 int count_words(string text)
 {
-    int words = 1; // O texto começa com pelo menos 1 palavra
+    int words = 1;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        // Cada espaço em branco indica a separação de uma palavra
         if (text[i] == ' ')
         {
             words++;
@@ -69,7 +67,6 @@ int count_sentences(string text)
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        // Ponto final, exclamação ou interrogação marcam o fim de uma frase
         if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             sentences++;
