@@ -1,10 +1,10 @@
-sort1 uses: Merge Sort
-
-How do you know?: is Merge Sort because it was significantly faster than the other two algorithms across all test files (sorted, random, and reversed), finishing in a fraction of a second. This reflects its O(n log n) time complexity in both best, average, and worst-case scenarios
-
-sort2 uses: Selection Sort
+sort1 uses: Selection Sort
 
 How do you know?: is Selection Sort because it maintained a consistently slow execution time (~2.9s) regardless of whether the input list was already sorted, random, or reversed. Since Selection Sort always scans the entire array to find the smallest remaining element regardless of initial order, its time complexity remains O(n^2) across all cases
+
+sort2 uses: Merge Sort
+
+How do you know?: is Merge Sort because it was significantly faster than the other two algorithms across all test files (sorted, random, and reversed), finishing in a fraction of a second. This reflects its O(n log n) time complexity in both best, average, and worst-case scenarios
 
 sort3 uses: Bubble Sort
 
