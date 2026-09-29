@@ -67,15 +67,4 @@ int main(int argc, string argv[])
     {
 
         // Query for each rank
-        for (int j = 0; j < candidate_count; j++)Perfeito! Vamos passar para o **Runoff** (da Semana 3).
-
-### 1. Criar e entrar na pasta do exercício
-No terminal, descarregue os ficheiros do problema executando:
-
-```bash
-cd ~/
-wget [https://cdn.cs50.net/2023/fall/psets/3/runoff.zip](https://cdn.cs50.net/2023/fall/psets/3/runoff.zip)
-unzip runoff.zip
-rm runoff.zip
-cd runoff
-code runoff.c
+        for (int j = 0; j < candidate_count; j++)
