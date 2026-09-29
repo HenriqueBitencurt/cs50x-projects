@@ -1,10 +1,10 @@
-sort1 uses: bubble sort
+sort1 uses: selection sort
 
-How do you know?: sort1 is Bubble Sort because it shows a clear difference in performance depending on whether the list is sorted or reversed, taking advantage of its best-case O(n) runtime on sorted data.
+How do you know?: sort1 is Selection Sort because its execution time remains consistently slow regardless of whether the input list is sorted, random, or reversed, running in O(n^2) time across all scenarios.
 
-sort2 uses: selection sort
+sort2 uses: bubble sort
 
-How do you know?: sort2 is Selection Sort because its execution time remains consistently slow regardless of whether the input list is sorted, random, or reversed, running in O(n^2) time across all scenarios.
+How do you know?: sort2 is Bubble Sort because it shows a clear difference in performance depending on whether the list is sorted or reversed, taking advantage of its best-case O(n) runtime on sorted data.
 
 sort3 uses: merge sort
 
