@@ -1,11 +1,11 @@
 sort1 uses: merge sort
 
-How do you know?: is Merge Sort because it was significantly faster than the other two algorithms across all test files (sorted, random, and reversed), finishing in a fraction of a second. This reflects its O(n log n) time complexity in both best, average, and worst-case scenarios
+How do you know?: sort1 is Merge Sort because it was significantly faster than the other two algorithms across all test files (sorted, random, and reversed), finishing in a fraction of a second. This reflects its O(n log n) time complexity.
 
 sort2 uses: selection sort
 
-How do you know?: is Selection Sort because it maintained a consistently slow execution time (~2.9s) regardless of whether the input list was already sorted, random, or reversed. Since Selection Sort always scans the entire array to find the smallest remaining element regardless of initial order, its time complexity remains O(n^2) across all cases
+How do you know?: sort2 is Selection Sort because it maintained a consistently slow execution time (~2.9s) regardless of whether the input list was already sorted, random, or reversed, running in O(n^2) time.
 
 sort3 uses: bubble sort
 
-How do you know?: is Bubble Sort because it took the longest time (~5.6s) on the reversed list (worst-case scenario), but showed a noticeable decrease in execution time when running on the already sorted list. This optimization happens because it can detect when no swaps are made and finish earlier, matching Bubble Sort's behavior
+How do you know?: sort3 is Bubble Sort because it took the longest time (~5.6s) on the reversed list (worst-case scenario), but showed a noticeable decrease in execution time when running on the already sorted list.
