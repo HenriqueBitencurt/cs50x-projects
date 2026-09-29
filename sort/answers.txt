@@ -1,6 +1,6 @@
 sort1 uses: Merge Sort
 
-How do you know?: 
+How do you know?: is Merge Sort because it was significantly faster than the other two algorithms across all test files (sorted, random, and reversed), finishing in a fraction of a second. This reflects its $O(n \log n)$ time complexity in both best, average, and worst-case scenarios.
 
 sort2 uses: Selection Sort
 
