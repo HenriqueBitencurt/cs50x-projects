@@ -6,6 +6,7 @@
         "/opt/cs50/extensions/cs50-0.0.1.vsix",
         "/opt/cs50/extensions/design50-1.0.0.vsix",
         "/opt/cs50/extensions/ddb50-2.0.0.vsix",
+        "/opt/cs50/extensions/help50-0.0.1.vsix",
         "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix",
         "/opt/cs50/extensions/style50-0.0.1.vsix",
         "cs50.extension-uninstaller",
@@ -182,7 +183,13 @@
         "terminal.integrated.gpuAcceleration": "off",
         "terminal.integrated.persistentSessionReviveProcess": "never",
         "terminal.integrated.profiles.linux": {
-          "JavaScript Debug Terminal": null
+          "JavaScript Debug Terminal": null,
+          "Sysadmins": {
+            "args": [
+              "bash"
+            ],
+            "path": "sudo"
+          }
         },
         "terminal.integrated.sendKeybindingsToShell": true,
         "terminal.integrated.shellIntegration.decorationsEnabled": "never",
@@ -247,7 +254,7 @@
     8082,
     8787
   ],
-  "image": "ghcr.io/cs50/codespace:ed92538a6df1e1f04bb2c772313d298cbb4bae70",
+  "image": "ghcr.io/cs50/codespace:d143a39b029e2ba1967a95f6130087e886f65b93",
   "mounts": [
     {
       "source": "/var/run/docker.sock",
