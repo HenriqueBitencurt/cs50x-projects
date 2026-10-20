@@ -50,7 +50,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
-// Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
@@ -69,7 +68,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sumRed = 0, sumGreen = 0, sumBlue = 0;
             float count = 0.0;
 
-            // Percorre os vizinhos na grade 3x3
             for (int di = -1; di <= 1; di++)
             {
                 for (int dj = -1; dj <= 1; dj++)
@@ -77,7 +75,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int ni = i + di;
                     int nj = j + dj;
 
-                    // Verifica se o vizinho está dentro dos limites da imagem
                     if (ni >= 0 && ni < height && nj >= 0 && nj < width)
                     {
                         sumRed += copy[ni][nj].rgbtRed;
@@ -88,7 +85,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            // Atribui a média calculada ao pixel
             image[i][j].rgbtRed = round(sumRed / count);
             image[i][j].rgbtGreen = round(sumGreen / count);
             image[i][j].rgbtBlue = round(sumBlue / count);
