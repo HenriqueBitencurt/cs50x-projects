@@ -1,0 +1,5 @@
+The audio metrics provided by the Spotify API (such as danceability, energy, valence, and tempo) allow Spotify to conduct an in-depth analysis of users' habits, tastes, and moods throughout the year. In the context of Spotify Wrapped, these analyses can be used to:
+
+1. Characterize a listener’s musical personality: By calculating the average energy and danceability of a user’s most-listened-to songs, Spotify can categorize their profile (for example, determining whether they prefer high-energy, upbeat tracks for working out or calmer, acoustic tracks for relaxing).
+2. Create personalized playlists and seasonal summaries: Valence (the musical positivity) and tempo help correlate music choices with specific times of the year or emotional states, making it possible to craft engaging emotional narratives for each user at the end of the year.
+3. Identify global trends: Comparing the characteristics of the 100 most-streamed songs of 2018 helps in understanding collective cultural preferences, revealing whether the global audience gravitated more toward danceable hits or slow ballads that year.
