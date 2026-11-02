@@ -1,6 +1,6 @@
 # StudySync
 
-#### Video Demo: [Link para o teu vídeo do Loom](O_TEU_LINK_DO_LOOM_AQUI)
+#### Video Demo:(https://www.loom.com/share/9fbbf034a1db4c459aecabe8685b5bab)
 
 #### Description:
 StudySync is a comprehensive web-based academic hub and productivity suite designed specifically for students to manage their daily school life, assignments, upcoming exams, grades, and focus sessions in a single, unified platform. Developed as the final project for CS50's Introduction to Computer Science, StudySync bridges the gap between traditional planners and digital workflow tools, leveraging a clean, modern interface built with Bootstrap and JavaScript, powered by a robust Python Flask backend and a secure SQLite database.
