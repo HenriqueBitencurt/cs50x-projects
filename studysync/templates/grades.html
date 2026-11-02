@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notas
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2>Calculadora e Registo de Notas</h2>
+
+        <form action="/grades" method="post" class="row g-3 mb-5 mt-3">
+            <div class="col-md-3">
+                <input autocomplete="off" autofocus class="form-control" name="subject" placeholder="Disciplina" type="text" required>
+            </div>
+            <div class="col-md-3">
+                <input autocomplete="off" class="form-control" name="assessment_name" placeholder="Nome da Avaliação (ex: Teste 1)" type="text" required>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" name="score" placeholder="Nota obtida" type="number" step="0.1" min="0" required>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" name="max_score" placeholder="Cotação máxima" type="number" step="0.1" min="0.1" required>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" type="submit">Adicionar</button>
+            </div>
+        </form>
+
+        <!-- Tabela de Notas -->
+        <h3>As tuas Avaliações</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Avaliação</th>
+                    <th>Nota</th>
+                    <th>Cotação Máxima</th>
+                    <th>Percentagem</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                    <tr>
+                        <td>{{ grade.subject }}</td>
+                        <td>{{ grade.assessment_name }}</td>
+                        <td>{{ grade.score }}</td>
+                        <td>{{ grade.max_score }}</td>
+                        <td>{{ "%.1f"|format((grade.score / grade.max_score) * 100) }}%</td>
+                        <td>
+                            <form action="/delete_grade/{{ grade.id }}" method="post" style="display:inline;">
+                                <button class="btn btn-sm btn-danger" type="submit">Remover</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6" class="text-muted">Ainda não tens notas registadas.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

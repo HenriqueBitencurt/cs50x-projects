@@ -1,0 +1,25 @@
+/* Seletor 1: tag (body) - Propriedades: background-color, color */
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+/* Seletor 2: classe (.main-header) - Propriedades: padding */
+.main-header {
+    padding: 4rem 1rem;
+}
+
+/* Seletor 3: ID (#alert-btn) - Propriedades: font-weight */
+#alert-btn {
+    font-weight: bold;
+}
+
+/* Seletor 4: tag (h2) - Propriedades: color */
+h2 {
+    color: #0d6efd;
+}
+
+/* Seletor 5: classe (.card) - Propriedades: border-radius */
+.card {
+    border-radius: 10px;
+}

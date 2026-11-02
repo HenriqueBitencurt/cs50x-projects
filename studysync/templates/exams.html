@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Exames
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2>Calendário de Exames e Testes</h2>
+
+        <form action="/exams" method="post" class="row g-3 mb-5 mt-3">
+            <div class="col-md-6">
+                <input autocomplete="off" autofocus class="form-control" name="subject" placeholder="Disciplina / Matéria" type="text" required>
+            </div>
+            <div class="col-md-4">
+                <input class="form-control" name="exam_date" type="date" required>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" type="submit">Adicionar</button>
+            </div>
+        </form>
+
+        <h3>Próximos Exames</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Data do Exame</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for exam in exams %}
+                    <tr>
+                        <td>{{ exam.subject }}</td>
+                        <td>{{ exam.exam_date }}</td>
+                        <td>
+                            <form action="/delete_exam/{{ exam.id }}" method="post" style="display:inline;">
+                                <button class="btn btn-sm btn-danger" type="submit">Remover</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="text-muted">Ainda não tens exames agendados.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
