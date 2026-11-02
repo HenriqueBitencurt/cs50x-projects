@@ -5,19 +5,45 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container mt-5" style="max-width: 400px;">
-        <h2 class="mb-4">Iniciar Sessão</h2>
-        <form action="/login" method="post">
-            <div class="mb-3 text-start">
-                <label for="username" class="form-label">Nome de Utilizador</label>
-                <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Username" type="text" required>
+    <!-- Bloco temporário de identificação para o vídeo do CS50 -->
+    <div class="card mb-4 bg-dark text-white shadow-sm border-secondary mx-auto" style="max-width: 500px;">
+        <div class="card-body text-center py-3">
+            <h5 class="text-info fw-bold mb-2">StudySync - Projeto Final CS50</h5>
+            <p class="mb-1 small"><strong>Nome:</strong> Henrique Bitencurt</p>
+            <p class="mb-1 small"><strong>GitHub:</strong> HenriqueBitencurt</p>
+            <p class="mb-1 small"><strong>edX:</strong> HenriqueBitencurt</p>
+            <p class="mb-0 text-muted" style="font-size: 0.75rem;">Data de Gravação: 2 de Novembro de 2026</p>
+        </div>
+    </div>
+    <!-- Fim do bloco de identificação -->
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4">Entrar no StudySync</h2>
+
+                        <form action="/login" method="post">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Utilizador</label>
+                                <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Nome de utilizador" type="text" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Palavra-passe</label>
+                                <input class="form-control" id="password" name="password" placeholder="Palavra-passe" type="password" required>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary" type="submit">Entrar</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <p class="small text-muted">Ainda não tens conta? <a href="/register">Regista-te aqui</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3 text-start">
-                <label for="password" class="form-label">Palavra-passe</label>
-                <input class="form-control" id="password" name="password" placeholder="Password" type="password" required>
-            </div>
-            <button class="btn btn-primary w-100 mt-2" type="submit">Entrar</button>
-        </form>
-        <p class="mt-3 text-muted">Ainda não tens conta? <a href="/register">Regista-te aqui</a>.</p>
+        </div>
     </div>
 {% endblock %}
