@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2>Gestor de Tarefas</h2>
+
+        <!-- Formulário para adicionar nova tarefa -->
+        <form action="/tasks" method="post" class="row g-3 mb-5 mt-3">
+            <div class="col-md-4">
+                <autocomplete>
+                <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Título da tarefa" type="text" required>
+            </autocomplete></div>
+            <div class="col-md-3">
+                <input autocomplete="off" class="form-control" name="subject" placeholder="Disciplina / Matéria" type="text" required>
+            </div>
+            <div class="col-md-3">
+                <input class="form-control" name="due_date" type="date" required>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" type="submit">Adicionar</button>
+            </div>
+        </form>
+
+        <!-- Tabela de Tarefas -->
+        <h3>As tuas Tarefas</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Disciplina</th>
+                    <th>Data Limite</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr>
+                        <td>{{ task.title }}</td>
+                        <td>{{ task.subject }}</td>
+                        <td>{{ task.due_date }}</td>
+                        <td>
+                            {% if task.status == 'concluído' %}
+                                <span class="badge bg-success">Concluído</span>
+                            {% else %}
+                                <span class="badge bg-warning text-dark">Pendente</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if task.status != 'concluído' %}
+                                <form action="/complete_task/{{ task.id }}" method="post" style="display:inline;">
+                                    <button class="btn btn-sm btn-success" type="submit">Concluir</button>
+                                </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="text-muted">Ainda não tens tarefas registadas.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Part 1: Multiple Choice Logic
+                let correctButton = document.querySelector('.correct');
+                correctButton.addEventListener('click', function() {
+                    correctButton.style.backgroundColor = '#d4edda'; // Light green
+                    document.querySelector('#feedback1').textContent = 'Correct!';
+                    document.querySelector('#feedback1').style.color = '#155724';
+                });
+
+                let incorrectButtons = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrectButtons.length; i++) {
+                    incorrectButtons[i].addEventListener('click', function() {
+                        incorrectButtons[i].style.backgroundColor = '#f8d7da'; // Light red
+                        document.querySelector('#feedback1').textContent = 'Incorrect';
+                        document.querySelector('#feedback1').style.color = '#721c24';
+                    });
+                }
+
+                // Part 2: Free Response Logic
+                let submitButton = document.querySelector('#check');
+                submitButton.addEventListener('click', function() {
+                    let input = document.querySelector('#answer');
+                    // Check for exact string (case-insensitive)
+                    if (input.value.trim().toLowerCase() === 'switzerland') {
+                        input.style.backgroundColor = '#d4edda';
+                        document.querySelector('#feedback2').textContent = 'Correct!';
+                        document.querySelector('#feedback2').style.color = '#155724';
+                    } else {
+                        input.style.backgroundColor = '#f8d7da';
+                        document.querySelector('#feedback2').textContent = 'Incorrect';
+                        document.querySelector('#feedback2').style.color = '#721c24';
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <h3>What is the approximate size of a web page's favicon in pixels?</h3>
+                <button class="incorrect">8x8</button>
+                <button class="correct">16x16</button>
+                <button class="incorrect">32x32</button>
+                <button class="incorrect">64x64</button>
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is CERN located?</h3>
+                <input id="answer" type="text">
+                <button id="check">Check Answer</button>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
