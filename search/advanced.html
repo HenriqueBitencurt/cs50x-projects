@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-nav">
+        <a href="index.html">Pesquisa Google</a>
+    </header>
+
+    <main class="advanced-container">
+        <div class="advanced-header">
+            <h2>Pesquisa Avançada</h2>
+        </div>
+
+        <form action="https://www.google.com/search" method="GET">
+            <div class="advanced-form-group">
+                <label for="as_q">todas estas palavras:</label>
+                <input type="text" name="as_q" id="as_q" class="advanced-input">
+            </div>
+
+            <div class="advanced-form-group">
+                <label for="as_epq">esta palavra ou frase exata:</label>
+                <input type="text" name="as_epq" id="as_epq" class="advanced-input">
+            </div>
+
+            <div class="advanced-form-group">
+                <label for="as_oq">qualquer uma destas palavras:</label>
+                <input type="text" name="as_oq" id="as_oq" class="advanced-input">
+            </div>
+
+            <div class="advanced-form-group">
+                <label for="as_eq">nenhuma destas palavras:</label>
+                <input type="text" name="as_eq" id="as_eq" class="advanced-input">
+            </div>
+
+            <div class="advanced-form-group button-row">
+                <input type="submit" value="Pesquisa avançada" class="btn-advanced">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
